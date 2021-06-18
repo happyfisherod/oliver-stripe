@@ -7,6 +7,10 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>PHP Stripe Payment Gateway Integration - Tutsmake.com</title>
 
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon/180x180.png">
+  <link rel="icon" href="img/apple-touch-icon/180x180.png">
+
   <script src="https://js.stripe.com/v3/"></script>
   <script src="js/index.js" data-rel-js></script>
 
