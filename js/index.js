@@ -121,7 +121,7 @@ function registerElements(elements, exampleName) {
       example.classList.remove('submitting');
 
       if (result.token) {
-        token = result.token;
+        var token = result.token;
 
         // If we received a token, show the token ID.
         example.querySelector('.token').innerText = token.id;
