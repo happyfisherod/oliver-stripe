@@ -19,7 +19,7 @@
       "currency" => "usd",
       "description" => "stripe integration in PHP with source code - tutsmake.com",
       "source" => $token,
-    ));exit;
+    ));
 
     // after successfull payment, you can store payment related information into your database
 
