@@ -124,6 +124,23 @@ function registerElements(elements, exampleName) {
         // If we received a token, show the token ID.
         example.querySelector('.token').innerText = result.token.id;
         example.classList.add('submitted');
+        
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+        console.log('Token Created!!');
+        console.log(token)
+        $('#token_response').html(JSON.stringify(token));
+ 
+        $.ajax({
+          url:"payment.php",
+          method: 'post',
+          data: { tokenId: token.id, amount: amount },
+          dataType: "json",
+          success: function( response ) {
+            console.log(response.data);
+            $('#token_response').append( '<br />' + JSON.stringify(response.data));
+          }
+        })
       } else {
         // Otherwise, un-disable inputs.
         enableInputs();
