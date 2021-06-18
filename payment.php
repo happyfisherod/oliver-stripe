@@ -11,7 +11,7 @@
     \Stripe\Stripe::setApiKey($stripeSecret);
 
     // Get the payment token ID submitted by the form:
-    $token = $_POST['tokenId'];exit;
+    $token = $_POST['tokenId'];
 
     // Charge the user's card:
     $charge = \Stripe\Charge::create(array(
@@ -19,7 +19,7 @@
       "currency" => "usd",
       "description" => "stripe integration in PHP with source code - tutsmake.com",
       "source" => $token,
-    ));
+    ));exit;
 
     // after successfull payment, you can store payment related information into your database
 
