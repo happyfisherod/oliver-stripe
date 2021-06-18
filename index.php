@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon/180x180.png">
   <link rel="icon" href="img/apple-touch-icon/180x180.png">
 
-  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://js.stripe.com/v1/"></script>
   <script src="js/index.js" data-rel-js></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
