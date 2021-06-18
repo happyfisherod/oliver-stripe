@@ -95,7 +95,7 @@
 <script src="js/example3.js" data-rel-js></script>
 
 <script type="text/javascript">
-  var amount = 0;
+  var amount = 25;
   function pay(amount) {
     amount = amount;
   }
