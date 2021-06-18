@@ -1,6 +1,6 @@
 'use strict';
 
-var stripe = Stripe('pk_test_51J3WRVFXIkqDBFQn6H5nWpGK70zRjDv6HWGyyGUv5jiZJKmld7p6DR85l5NPVigObJcjItpuEBMsCoBBJ7PvFJoC00H4UZwIaG');
+var stripe = Stripe('pk_test_5f6jfFP2ZV5U9TXQYG0vtqFJ00eFVWNoRX');
 
 function registerElements(elements, exampleName) {
   var formClass = '.' + exampleName;

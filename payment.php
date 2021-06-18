@@ -5,7 +5,7 @@
     require_once('vendor/autoload.php');
   
     //stripe secret key or revoke key
-    $stripeSecret = 'sk_test_51J3WRVFXIkqDBFQnFpdwGQUMb0PxGPesRSNILcpdtU5r39HJGCd5KiW9TYr9muPOFjKGHb52AS0XmjS67Gw8LDFd00d3rDaRnu';
+    $stripeSecret = 'sk_test_j5k0976GOLSOtiRzbDLpKqat00og5iM3cY';
 
     // See your keys here: https://dashboard.stripe.com/account/apikeys
     \Stripe\Stripe::setApiKey($stripeSecret);
