@@ -1,29 +1,29 @@
 <?php
-    
-    if($_POST['tokenId']) {
 
-      require_once('vendor/autoload.php');
-    
-      //stripe secret key or revoke key
-      $stripeSecret = 'sk_test_j5k0976GOLSOtiRzbDLpKqat00og5iM3cY';
+  if($_POST['tokenId']) {
 
-      // See your keys here: https://dashboard.stripe.com/account/apikeys
-      \Stripe\Stripe::setApiKey($stripeSecret);
+    require_once('vendor/autoload.php');
+  
+    //stripe secret key or revoke key
+    $stripeSecret = 'sk_test_j5k0976GOLSOtiRzbDLpKqat00og5iM3cY';
 
-     // Get the payment token ID submitted by the form:
-      $token = $_POST['tokenId'];
+    // See your keys here: https://dashboard.stripe.com/account/apikeys
+    \Stripe\Stripe::setApiKey($stripeSecret);
 
-      // Charge the user's card:
-      $charge = \Stripe\Charge::create(array(
-          "amount" => $_POST['amount'],
-          "currency" => "usd",
-          "description" => "stripe integration in PHP with source code - tutsmake.com",
-          "source" => $token,
-       ));
-            
-       // after successfull payment, you can store payment related information into your database
-             
-        $data = array('success' => true, 'data'=> $charge);
+    // Get the payment token ID submitted by the form:
+    $token = $_POST['tokenId'];
 
-        echo json_encode($data); 
-}
+    // Charge the user's card:
+    $charge = \Stripe\Charge::create(array(
+      "amount" => $_POST['amount'],
+      "currency" => "usd",
+      "description" => "stripe integration in PHP with source code - tutsmake.com",
+      "source" => $token,
+    ));
+
+    // after successfull payment, you can store payment related information into your database
+
+    $data = array('success' => true, 'data'=> $charge);
+
+    echo json_encode($data); 
+  }
