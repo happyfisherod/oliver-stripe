@@ -15,11 +15,8 @@
   <link rel="stylesheet" type="text/css" href="css/base.css" data-rel-css="" />
 
   <!-- CSS for each example: -->
-  <link rel="stylesheet" type="text/css" href="css/example1.css" data-rel-css="" />
-  <link rel="stylesheet" type="text/css" href="css/example2.css" data-rel-css="" />
   <link rel="stylesheet" type="text/css" href="css/example3.css" data-rel-css="" />
-  <link rel="stylesheet" type="text/css" href="css/example4.css" data-rel-css="" />
-  <link rel="stylesheet" type="text/css" href="css/example5.css" data-rel-css="" />
+
   <style>
    .container{
     padding: 0.5%;
@@ -91,48 +88,16 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="https://checkout.stripe.com/checkout.js"></script>
- 
+
 <script src="js/l10n.js" data-rel-js></script>
 
 <!-- Scripts for each example: -->
-<script src="js/example1.js" data-rel-js></script>
-<script src="js/example2.js" data-rel-js></script>
 <script src="js/example3.js" data-rel-js></script>
-<script src="js/example4.js" data-rel-js></script>
-<script src="js/example5.js" data-rel-js></script>
 
 <script type="text/javascript">
- 
+  var amount = 0;
   function pay(amount) {
-    var handler = StripeCheckout.configure({
-      key: 'pk_test_51J3WRVFXIkqDBFQn6H5nWpGK70zRjDv6HWGyyGUv5jiZJKmld7p6DR85l5NPVigObJcjItpuEBMsCoBBJ7PvFJoC00H4UZwIaG', // your publisher key id
-      locale: 'auto',
-      token: function (token) {
-        // You can access the token ID with `token.id`.
-        // Get the token ID to your server-side code for use.
-        console.log('Token Created!!');
-        console.log(token)
-        $('#token_response').html(JSON.stringify(token));
- 
-        $.ajax({
-          url:"payment.php",
-          method: 'post',
-          data: { tokenId: token.id, amount: amount },
-          dataType: "json",
-          success: function( response ) {
-            console.log(response.data);
-            $('#token_response').append( '<br />' + JSON.stringify(response.data));
-          }
-        })
-      }
-    });
-  
-    handler.open({
-      name: 'Demo Site',
-      description: '2 widgets',
-      amount: amount * 100
-    });
+    amount = amount;
   }
 </script>
 </body>
