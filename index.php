@@ -23,7 +23,7 @@
 
   <style>
    .container{
-    padding: 0.5%;
+       padding: 0.5%;
    } 
 </style>
 </head>
